@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Villa Lavanda is an elegant private villa stay with calm interiors, garden living, thoughtful amenities, and direct booking links for Airbnb and Booking.com."
+    />
+    <meta name="theme-color" content="#2f4034" />
+    <meta property="og:title" content="Villa Lavanda | Elegant Private Villa Stay" />
+    <meta
+      property="og:description"
+      content="A quiet, refined villa designed for slow mornings, long dinners, and effortless stays."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=82"
+    />
+    <title>Villa Lavanda | Elegant Private Villa Stay</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Villa Lavanda",
+        "description": "Elegant private villa accommodation with curated amenities, direct booking links, and map location.",
+        "image": [
+          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=82",
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=82"
+        ],
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "Private pool", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Outdoor dining", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Parking", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Villa Lavanda home">
+        <span class="brand-mark">VL</span>
+        <span>Villa Lavanda</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" data-nav>
+        <a href="#stay">Stay</a>
+        <a href="#availability">Availability</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#location">Location</a>
+        <a href="#reviews">Reviews</a>
+        <a class="nav-cta" href="#book">Book</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-label="Villa Lavanda introduction">
+        <picture class="hero-media">
+          <source
+            media="(max-width: 720px)"
+            srcset="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=82"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=82"
+            alt="Elegant villa terrace with warm evening light"
+          />
+        </picture>
+        <div class="hero-shade"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Private villa retreat</p>
+          <h1>Villa Lavanda</h1>
+          <p class="hero-copy">
+            A refined villa stay shaped around quiet mornings, garden air, generous rooms, and evenings
+            that feel easy from the moment guests arrive.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#availability">Check availability</a>
+            <a class="button button-quiet" href="#gallery">View the villa</a>
+          </div>
+        </div>
+
+        <aside class="hero-details" aria-label="Villa highlights">
+          <div>
+            <strong data-config="guests">8</strong>
+            <span>Guests</span>
+          </div>
+          <div>
+            <strong data-config="bedrooms">4</strong>
+            <span>Bedrooms</span>
+          </div>
+          <div>
+            <strong data-config="bathrooms">3</strong>
+            <span>Bathrooms</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="booking-strip" id="book" aria-label="Booking options">
+        <div class="section-kicker">Reserve your stay</div>
+        <div class="booking-grid">
+          <article class="booking-card airbnb-card">
+            <div>
+              <span class="booking-label">Airbnb</span>
+              <h2>Book on Airbnb</h2>
+              <p>Use this button for guests who prefer Airbnb reviews, messaging, and secure checkout.</p>
+            </div>
+            <a class="button button-dark" data-link="airbnb" href="#" target="_blank" rel="noopener">Open Airbnb</a>
+          </article>
+
+          <article class="booking-card booking-card-accent">
+            <div>
+              <span class="booking-label">Booking.com</span>
+              <h2>Book on Booking.com</h2>
+              <p>Send guests directly to the Booking.com listing for calendar, policies, and rates.</p>
+            </div>
+            <a class="button button-dark" data-link="booking" href="#" target="_blank" rel="noopener">Open Booking</a>
+          </article>
+
+          <article class="booking-card direct-card">
+            <div>
+              <span class="booking-label">Direct inquiry</span>
+              <h2>Ask before booking</h2>
+              <p>Perfect for longer stays, special requests, and questions about the villa.</p>
+            </div>
+            <a class="button button-dark" data-link="email" href="#">Send inquiry</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section availability" id="availability" aria-labelledby="availability-title">
+        <div class="availability-copy">
+          <p class="eyebrow">Availability</p>
+          <h2 id="availability-title">See open dates before choosing where to book.</h2>
+          <p>
+            This calendar gives guests a clear first look at available, booked, and closed dates. Final
+            pricing and confirmation should still happen through Airbnb, Booking.com, or direct host approval.
+          </p>
+          <div class="availability-meta">
+            <div>
+              <span>Minimum stay</span>
+              <strong data-availability-min-stay>3 nights</strong>
+            </div>
+            <div>
+              <span>Calendar updated</span>
+              <strong data-availability-updated>30 June 2026</strong>
+            </div>
+          </div>
+          <div class="availability-actions">
+            <a class="button button-primary" data-link="airbnb" href="#" target="_blank" rel="noopener">
+              Verify on Airbnb
+            </a>
+            <a class="button button-outline" data-link="booking" href="#" target="_blank" rel="noopener">
+              Verify on Booking.com
+            </a>
+          </div>
+        </div>
+
+        <div class="calendar-card" aria-label="Villa Lavanda availability calendar">
+          <div class="calendar-toolbar">
+            <button class="calendar-nav" type="button" data-calendar-prev aria-label="Previous month">
+              <span aria-hidden="true">&lt;</span>
+            </button>
+            <div>
+              <span class="calendar-kicker">Villa Lavanda</span>
+              <h3 data-calendar-title>Availability</h3>
+            </div>
+            <button class="calendar-nav" type="button" data-calendar-next aria-label="Next month">
+              <span aria-hidden="true">&gt;</span>
+            </button>
+          </div>
+
+          <div class="calendar-weekdays" aria-hidden="true">
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+            <span>Sun</span>
+          </div>
+          <div class="calendar-grid" data-calendar-grid role="grid" aria-label="Monthly availability"></div>
+
+          <div class="calendar-legend" aria-label="Calendar legend">
+            <span><i class="status-dot available"></i>Available</span>
+            <span><i class="status-dot booked"></i>Booked</span>
+            <span><i class="status-dot closed"></i>Closed</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro" id="stay">
+        <div class="section-heading">
+          <p class="eyebrow">The stay</p>
+          <h2>A calm villa made for comfortable hosting.</h2>
+        </div>
+        <div class="intro-copy">
+          <p>
+            Villa Lavanda brings together privacy, outdoor living, and warm interior detail. The site is
+            designed to match the standard guests expect from Airbnb and Booking.com while giving the villa
+            its own elegant identity.
+          </p>
+          <p>
+            Replace the placeholder photos with real property images, paste your listing links in
+            <code>script.js</code>, and this page becomes ready for launch.
+          </p>
+        </div>
+      </section>
+
+      <section class="section feature-grid" aria-label="Villa features">
+        <article class="feature-large">
+          <img
+            src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?auto=format&fit=crop&w=1300&q=82"
+            alt="Bright villa living room with natural materials"
+            loading="lazy"
+          />
+          <div>
+            <span>Interior</span>
+            <h3>Bright rooms, soft textures, and space to slow down.</h3>
+          </div>
+        </article>
+        <article class="feature-small">
+          <img
+            src="https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?auto=format&fit=crop&w=900&q=82"
+            alt="Private pool beside a villa"
+            loading="lazy"
+          />
+          <div>
+            <span>Outside</span>
+            <h3>Poolside days and quiet evening dinners.</h3>
+          </div>
+        </article>
+        <article class="feature-small">
+          <img
+            src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=900&q=82"
+            alt="Elegant bedroom prepared for guests"
+            loading="lazy"
+          />
+          <div>
+            <span>Rest</span>
+            <h3>Bedrooms prepared with hotel-level care.</h3>
+          </div>
+        </article>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="section-heading centered">
+          <p class="eyebrow">Gallery</p>
+          <h2>Everything guests need to imagine the stay.</h2>
+        </div>
+        <div class="gallery">
+          <img
+            src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=82"
+            alt="Modern villa exterior"
+            loading="lazy"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=900&q=82"
+            alt="Comfortable lounge area"
+            loading="lazy"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=900&q=82"
+            alt="Dining table with warm natural light"
+            loading="lazy"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=82"
+            alt="Bathroom with refined finishes"
+            loading="lazy"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=82"
+            alt="Kitchen and living space"
+            loading="lazy"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?auto=format&fit=crop&w=900&q=82"
+            alt="Villa pool terrace"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <section class="section amenities" id="amenities">
+        <div class="section-heading">
+          <p class="eyebrow">Amenities</p>
+          <h2>Designed for the practical details guests look for first.</h2>
+        </div>
+        <div class="amenity-grid">
+          <article>
+            <span class="amenity-icon">01</span>
+            <h3>Private pool</h3>
+            <p>A calm outdoor area for full days at the villa.</p>
+          </article>
+          <article>
+            <span class="amenity-icon">02</span>
+            <h3>Outdoor dining</h3>
+            <p>Comfortable evening meals with room for everyone.</p>
+          </article>
+          <article>
+            <span class="amenity-icon">03</span>
+            <h3>Fast Wi-Fi</h3>
+            <p>Reliable connection for planning, calls, and remote work.</p>
+          </article>
+          <article>
+            <span class="amenity-icon">04</span>
+            <h3>Equipped kitchen</h3>
+            <p>Cook at home with the essentials already prepared.</p>
+          </article>
+          <article>
+            <span class="amenity-icon">05</span>
+            <h3>Parking</h3>
+            <p>Easy arrival and simple day trips by car.</p>
+          </article>
+          <article>
+            <span class="amenity-icon">06</span>
+            <h3>Air conditioning</h3>
+            <p>Comfortable nights through the warm season.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section rooms">
+        <div class="section-heading centered">
+          <p class="eyebrow">Sleeping layout</p>
+          <h2>Clear details for families, couples, and groups.</h2>
+        </div>
+        <div class="room-grid">
+          <article>
+            <span>Bedroom 1</span>
+            <h3>Primary suite</h3>
+            <p>Queen or king bed, storage, and quiet morning light.</p>
+          </article>
+          <article>
+            <span>Bedroom 2</span>
+            <h3>Double room</h3>
+            <p>Comfortable room for a second couple or adult guests.</p>
+          </article>
+          <article>
+            <span>Bedroom 3</span>
+            <h3>Twin room</h3>
+            <p>Flexible setup for children, friends, or separate sleepers.</p>
+          </article>
+          <article>
+            <span>Bedroom 4</span>
+            <h3>Guest room</h3>
+            <p>Additional sleeping space for larger stays.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section location" id="location">
+        <div class="location-copy">
+          <p class="eyebrow">Location</p>
+          <h2>Map, arrival context, and nearby highlights.</h2>
+          <p>
+            Add the exact Google Maps place link or coordinates in <code>script.js</code>. The embedded map
+            will update automatically, and the button opens directions in a new tab.
+          </p>
+          <div class="nearby-list" aria-label="Nearby places">
+            <div>
+              <strong>Beaches</strong>
+              <span>Short drives for swimming and sunset walks.</span>
+            </div>
+            <div>
+              <strong>Restaurants</strong>
+              <span>Local dining, markets, and relaxed evening options.</span>
+            </div>
+            <div>
+              <strong>Day trips</strong>
+              <span>Easy access to old towns, viewpoints, and coast roads.</span>
+            </div>
+          </div>
+        </div>
+        <div class="map-panel">
+          <iframe
+            title="Villa Lavanda location on Google Maps"
+            data-map
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Villa%20Lavanda&output=embed"
+          ></iframe>
+          <a class="button button-primary map-button" data-link="maps" href="#" target="_blank" rel="noopener">
+            Open Google Maps
+          </a>
+        </div>
+      </section>
+
+      <section class="section reviews" id="reviews">
+        <div class="section-heading centered">
+          <p class="eyebrow">Guest confidence</p>
+          <h2>Social proof from the places travelers already trust.</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <div class="rating">Airbnb</div>
+            <blockquote>
+              "Beautiful villa, peaceful setting, and exactly the kind of place we wanted for a relaxed stay."
+            </blockquote>
+            <p>Replace with a real Airbnb guest review.</p>
+          </article>
+          <article>
+            <div class="rating">Booking.com</div>
+            <blockquote>
+              "Clean, elegant, well equipped, and easy to find. The outdoor area made the trip."
+            </blockquote>
+            <p>Replace with a real Booking.com guest review.</p>
+          </article>
+          <article>
+            <div class="rating">Direct</div>
+            <blockquote>
+              "The host communication was simple and the villa had every practical detail ready."
+            </blockquote>
+            <p>Replace with a direct guest message.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section policies">
+        <div class="policy-panel">
+          <div>
+            <p class="eyebrow">Good to know</p>
+            <h2>Clear expectations before guests book.</h2>
+          </div>
+          <div class="policy-list">
+            <article>
+              <h3>Check-in</h3>
+              <p>From 16:00. Add your exact arrival instructions.</p>
+            </article>
+            <article>
+              <h3>Check-out</h3>
+              <p>By 10:00. Adjust to match Airbnb and Booking.com.</p>
+            </article>
+            <article>
+              <h3>House rules</h3>
+              <p>No parties. Quiet hours and pet policy should match the listings.</p>
+            </article>
+            <article>
+              <h3>Cancellation</h3>
+              <p>Link to the current policy on each booking platform.</p>
+            </article>
+            <article>
+              <h3>Availability</h3>
+              <p>Calendar dates are a guide. Confirm live dates before accepting payment.</p>
+            </article>
+            <article>
+              <h3>Fees</h3>
+              <p>Add cleaning fees, tourist tax, deposit, and any seasonal charges.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section inquiry" id="contact">
+        <div class="inquiry-copy">
+          <p class="eyebrow">Contact</p>
+          <h2>Make direct questions effortless.</h2>
+          <p>
+            Guests can send dates and group size by email. For final availability and pricing, keep Airbnb
+            and Booking.com as the trusted booking sources.
+          </p>
+          <div class="contact-lines">
+            <a data-link="phone" data-phone-display href="#">Call host</a>
+            <a data-link="whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+            <a data-link="email" href="#">Email</a>
+          </div>
+        </div>
+        <form class="inquiry-form" data-inquiry-form>
+          <label>
+            Arrival
+            <input type="date" name="arrival" required />
+          </label>
+          <label>
+            Departure
+            <input type="date" name="departure" required />
+          </label>
+          <label>
+            Guests
+            <input type="number" name="guests" min="1" max="16" value="2" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Tell us what you need for your stay."></textarea>
+          </label>
+          <button class="button button-primary" type="submit">Prepare email inquiry</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="brand footer-brand" href="#top" aria-label="Villa Lavanda home">
+          <span class="brand-mark">VL</span>
+          <span>Villa Lavanda</span>
+        </a>
+        <p>Elegant private villa accommodation.</p>
+      </div>
+      <div class="footer-links">
+        <a data-link="airbnb" href="#" target="_blank" rel="noopener">Airbnb</a>
+        <a data-link="booking" href="#" target="_blank" rel="noopener">Booking.com</a>
+        <a data-link="maps" href="#" target="_blank" rel="noopener">Google Maps</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
