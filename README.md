@@ -22,6 +22,8 @@ In Airbnb, copy the listing calendar export/iCal link. It usually ends in `.ics`
 airbnbCalendarIcsUrl: "PASTE_AIRBNB_ICAL_LINK_HERE",
 ```
 
+Use Airbnb's export link only. In Airbnb's calendar sync screen, the fields named "other website link" and "calendar name" are for importing another website calendar into Airbnb. They are not needed for this Villa Lavanda website to read Airbnb.
+
 The site reads that feed and marks unavailable dates automatically:
 
 - Airbnb reserved/booked events become `booked`.
@@ -41,6 +43,8 @@ airbnbCalendarProxyUrl: "/api/airbnb-calendar?url=",
 ```
 
 If your hosting is static-only and does not support `/api` functions, the calendar cannot live-sync directly from Airbnb without adding a small proxy on your hosting provider.
+
+When live sync is unavailable, the site shows future dates as `Check` instead of pretending they are available.
 
 ## Manual calendar fallback
 

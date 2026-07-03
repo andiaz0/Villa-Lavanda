@@ -575,6 +575,15 @@ h3 {
   color: var(--closed);
 }
 
+.calendar-day.is-check {
+  background: #f6f4ef;
+  border-color: rgba(23, 33, 27, 0.18);
+}
+
+.calendar-day.is-check span {
+  color: var(--muted);
+}
+
 .calendar-day.is-past {
   opacity: 0.46;
 }
@@ -592,6 +601,27 @@ h3 {
   color: var(--muted);
   font-size: 0.86rem;
   font-weight: 750;
+}
+
+.calendar-sync-message {
+  margin: 1rem 0 0;
+  border: 1px solid rgba(185, 111, 74, 0.28);
+  border-radius: var(--radius);
+  background: #fff7e8;
+  color: #7a4a31;
+  padding: 0.72rem 0.85rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.calendar-sync-message.is-synced {
+  border-color: rgba(47, 125, 79, 0.25);
+  background: var(--available-soft);
+  color: var(--available);
+}
+
+.calendar-sync-message.is-hidden {
+  display: none;
 }
 
 .calendar-legend span {
@@ -620,6 +650,10 @@ h3 {
 
 .status-dot.closed {
   background: var(--closed);
+}
+
+.status-dot.check {
+  background: #9b958c;
 }
 
 .section {

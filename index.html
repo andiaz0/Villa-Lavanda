@@ -16,10 +16,11 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
-      content="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=82"
+      content="assets/images/villa-aerial-brand.jpeg"
     />
     <title>Villa Lavanda | Elegant Private Villa Stay</title>
-    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="icon" type="image/jpeg" href="assets/images/villa-lavanda-icon.jpeg" />
+    <link rel="apple-touch-icon" href="assets/images/villa-lavanda-icon.jpeg" />
     <link rel="stylesheet" href="styles.css" />
     <script type="application/ld+json">
       {
@@ -28,8 +29,9 @@
         "name": "Villa Lavanda",
         "description": "Elegant private villa accommodation with curated amenities, direct booking links, and map location.",
         "image": [
-          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=82",
-          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=82"
+          "assets/images/villa-aerial-brand.jpeg",
+          "assets/images/villa-pool-day.jpeg",
+          "assets/images/bedroom-double.jpeg"
         ],
         "amenityFeature": [
           { "@type": "LocationFeatureSpecification", "name": "Private pool", "value": true },
@@ -45,7 +47,7 @@
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Villa Lavanda home">
-        <span class="brand-mark">VL</span>
+        <span class="brand-mark"><img src="assets/images/villa-lavanda-icon.jpeg" alt="" /></span>
         <span>Villa Lavanda</span>
       </a>
 
@@ -70,11 +72,11 @@
         <picture class="hero-media">
           <source
             media="(max-width: 720px)"
-            srcset="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=82"
+            srcset="assets/images/villa-pool-day.jpeg"
           />
           <img
-            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=82"
-            alt="Elegant villa terrace with warm evening light"
+            src="assets/images/villa-aerial-brand.jpeg"
+            alt="Aerial view of Villa Lavanda with pool and garden"
           />
         </picture>
         <div class="hero-shade"></div>
@@ -192,11 +194,15 @@
             <span>Sun</span>
           </div>
           <div class="calendar-grid" data-calendar-grid role="grid" aria-label="Monthly availability"></div>
+          <p class="calendar-sync-message" data-calendar-sync-status>
+            Checking Airbnb calendar...
+          </p>
 
           <div class="calendar-legend" aria-label="Calendar legend">
             <span><i class="status-dot available"></i>Available</span>
             <span><i class="status-dot booked"></i>Booked</span>
             <span><i class="status-dot closed"></i>Closed</span>
+            <span><i class="status-dot check"></i>Check</span>
           </div>
         </div>
       </section>
@@ -222,30 +228,30 @@
       <section class="section feature-grid" aria-label="Villa features">
         <article class="feature-large">
           <img
-            src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?auto=format&fit=crop&w=1300&q=82"
-            alt="Bright villa living room with natural materials"
+            src="assets/images/villa-pool-day.jpeg"
+            alt="Villa Lavanda exterior beside the pool"
             loading="lazy"
           />
           <div>
-            <span>Interior</span>
-            <h3>Bright rooms, soft textures, and space to slow down.</h3>
+            <span>Architecture</span>
+            <h3>A warm timber villa framed by glass, stone, and mountain air.</h3>
           </div>
         </article>
         <article class="feature-small">
           <img
-            src="https://images.unsplash.com/photo-1613977257365-aaae5a9817ff?auto=format&fit=crop&w=900&q=82"
-            alt="Private pool beside a villa"
+            src="assets/images/pool-view-day.jpeg"
+            alt="Pool with mountain and city views at Villa Lavanda"
             loading="lazy"
           />
           <div>
-            <span>Outside</span>
-            <h3>Poolside days and quiet evening dinners.</h3>
+            <span>Pool</span>
+            <h3>Clear blue water with open views across the valley.</h3>
           </div>
         </article>
         <article class="feature-small">
           <img
-            src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=900&q=82"
-            alt="Elegant bedroom prepared for guests"
+            src="assets/images/bedroom-double.jpeg"
+            alt="Double bedroom with timber ceiling at Villa Lavanda"
             loading="lazy"
           />
           <div>

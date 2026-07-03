@@ -16,14 +16,7 @@ const villaConfig = {
   airbnbCalendarSync: true,
   airbnbCalendarIcsUrl: "https://www.airbnb.com/calendar/ical/1714050000210595231.ics?t=aae374db75f44c109b9c5461c1c00989",
   airbnbCalendarProxyUrl: "/api/airbnb-calendar?url=",
-  availabilityDates: {
-    "2026-07-04": "booked",
-    "2026-07-05": "booked",
-    "2026-07-06": "booked",
-    "2026-07-20": "closed",
-    "2026-07-21": "closed",
-    "2026-07-22": "closed"
-  }
+  availabilityDates: {}
 };
 
 const header = document.querySelector("[data-header]");
@@ -105,13 +98,16 @@ const calendarGrid = document.querySelector("[data-calendar-grid]");
 const calendarTitle = document.querySelector("[data-calendar-title]");
 const calendarPrev = document.querySelector("[data-calendar-prev]");
 const calendarNext = document.querySelector("[data-calendar-next]");
+const calendarSyncStatus = document.querySelector("[data-calendar-sync-status]");
 let availabilityDates = { ...villaConfig.availabilityDates };
+let calendarSyncState = villaConfig.airbnbCalendarSync && villaConfig.airbnbCalendarIcsUrl ? "syncing" : "manual";
 
 const statusLabels = {
   available: "Available",
   limited: "Limited",
   booked: "Booked",
-  closed: "Closed"
+  closed: "Closed",
+  check: "Check"
 };
 
 const monthNames = [
@@ -249,12 +245,24 @@ const setCalendarUpdatedText = (text) => {
   });
 };
 
+const setCalendarSyncStatus = (message, state = "") => {
+  if (!calendarSyncStatus) {
+    return;
+  }
+
+  calendarSyncStatus.textContent = message;
+  calendarSyncStatus.classList.toggle("is-synced", state === "synced");
+  calendarSyncStatus.classList.toggle("is-hidden", state === "hidden");
+};
+
 const syncAirbnbCalendar = async () => {
   if (!villaConfig.airbnbCalendarSync || !villaConfig.airbnbCalendarIcsUrl) {
+    setCalendarSyncStatus("Calendar is using manual fallback dates.", "hidden");
     return;
   }
 
   const feedUrls = getCalendarFeedUrls();
+  setCalendarSyncStatus("Checking Airbnb calendar...");
 
   for (const feedUrl of feedUrls) {
     try {
@@ -268,7 +276,9 @@ const syncAirbnbCalendar = async () => {
       const syncedDates = parseAirbnbCalendar(icsText);
 
       availabilityDates = { ...villaConfig.availabilityDates, ...syncedDates };
+      calendarSyncState = "synced";
       setCalendarUpdatedText("Synced from Airbnb");
+      setCalendarSyncStatus("Live Airbnb calendar synced.", "synced");
       renderCalendar();
       return;
     } catch (error) {
@@ -277,7 +287,10 @@ const syncAirbnbCalendar = async () => {
   }
 
   console.warn("Airbnb calendar sync failed. Using manual fallback dates.");
+  calendarSyncState = "failed";
   setCalendarUpdatedText("Manual fallback dates");
+  setCalendarSyncStatus("Live Airbnb sync is not available here. Publish with the API proxy, then this calendar will use Airbnb dates.");
+  renderCalendar();
 };
 
 const renderCalendar = () => {
@@ -306,7 +319,9 @@ const renderCalendar = () => {
     const dateKey = formatDateKey(date);
     const listedStatus = availabilityDates[dateKey];
     const isPast = dateKey < todayValue;
-    const status = isPast ? "closed" : listedStatus || "available";
+    const needsLiveConfirmation =
+      villaConfig.airbnbCalendarSync && villaConfig.airbnbCalendarIcsUrl && calendarSyncState !== "synced";
+    const status = isPast ? "closed" : listedStatus || (needsLiveConfirmation ? "check" : "available");
     const dayCell = document.createElement("div");
     const time = document.createElement("time");
     const label = document.createElement("span");
