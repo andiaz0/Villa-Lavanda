@@ -1,0 +1,84 @@
+# Villa Lavanda Website
+
+This is a static website. Open `index.html` in a browser or upload the whole `VillaLavanda` folder to hosting.
+
+## Edit the booking links
+
+Open `script.js` and replace these values:
+
+- `airbnbUrl`: paste the Airbnb listing URL.
+- `bookingUrl`: paste the Booking.com listing URL.
+- `mapsUrl`: paste the Google Maps share link.
+- `mapEmbedQuery`: use the exact villa name, address, or coordinates.
+- `hostEmail`, `phoneHref`, `phoneDisplay`, `whatsappHref`: replace with real contact details.
+
+## Sync available and closed dates from Airbnb
+
+The availability calendar can sync from the Airbnb calendar export link.
+
+In Airbnb, copy the listing calendar export/iCal link. It usually ends in `.ics`. Then open `script.js` and paste it here:
+
+```js
+airbnbCalendarIcsUrl: "PASTE_AIRBNB_ICAL_LINK_HERE",
+```
+
+The site reads that feed and marks unavailable dates automatically:
+
+- Airbnb reserved/booked events become `booked`.
+- Airbnb blocked/unavailable events become `closed`.
+- Future dates not blocked by Airbnb stay `available`.
+
+The colors are:
+
+- Available: green.
+- Closed: red.
+- Booked: soft lavender-plum.
+
+Because Airbnb calendar feeds are often blocked by browser CORS rules, this project includes `api/airbnb-calendar.js`. If the site is deployed on Vercel or a compatible host, keep this setting:
+
+```js
+airbnbCalendarProxyUrl: "/api/airbnb-calendar?url=",
+```
+
+If your hosting is static-only and does not support `/api` functions, the calendar cannot live-sync directly from Airbnb without adding a small proxy on your hosting provider.
+
+## Manual calendar fallback
+
+Manual dates are still available in `script.js` as a fallback:
+
+- `minimumStay`: shown beside the calendar.
+- `calendarUpdated`: shown beside the calendar so guests know how fresh the dates are.
+- `availabilityStartMonth`: first month shown by the calendar, using `YYYY-MM`.
+- `availabilityDates`: add dates using `YYYY-MM-DD`.
+
+Use these manual fallback statuses:
+
+- `booked`: already reserved.
+- `closed`: unavailable because the host has blocked the date.
+
+Any future date not listed in `availabilityDates` is shown as available. Past dates are automatically shown as closed.
+
+## Replace photos
+
+The current design uses elegant remote placeholder images. For a real launch, replace the image URLs in `index.html` with actual Villa Lavanda photos. Keep the same image sizes and sections:
+
+- Hero exterior or terrace photo.
+- Interior living photo.
+- Pool or garden photo.
+- Bedroom photo.
+- Six gallery photos showing exterior, living, dining, bathroom, kitchen, and pool.
+
+## Booking platform consistency
+
+Before launch, make these details match Airbnb and Booking.com exactly:
+
+- Guest capacity.
+- Bedroom and bathroom count.
+- Check-in and check-out times.
+- House rules.
+- Cancellation policy.
+- Amenities.
+- Real guest reviews.
+- Calendar dates and minimum stay.
+- Cleaning fee, tourist tax, deposit, and seasonal charges.
+
