@@ -3,41 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Villa Lavanda | Private Villa with Pool in Tetovo, North Macedonia</title>
+
     <meta
       name="description"
-      content="Villa Lavanda is an elegant private villa stay with calm interiors, garden living, thoughtful amenities, Airbnb booking, and direct host inquiries."
+      content="Villa Lavanda is a private villa in Tetovo, North Macedonia. Pool, 2 bedrooms, mountain views, terrace. Book on Airbnb or contact the host directly."
     />
-    <meta name="theme-color" content="#2f4034" />
-    <meta property="og:title" content="Villa Lavanda | Elegant Private Villa Stay" />
-    <meta
-      property="og:description"
-      content="A quiet, refined villa designed for slow mornings, long dinners, and effortless stays."
-    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://villalavanda.casa/" />
+
+    <!-- Geo tags -->
+    <meta name="geo.region" content="MK" />
+    <meta name="geo.placename" content="Tetovo, North Macedonia" />
+    <meta name="geo.position" content="42.03907;20.99329" />
+    <meta name="ICBM" content="42.03907, 20.99329" />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="assets/images/villa-aerial-brand.jpeg"
-    />
-    <title>Villa Lavanda | Elegant Private Villa Stay</title>
+    <meta property="og:url" content="https://villalavanda.casa/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Villa Lavanda" />
+    <meta property="og:title" content="Villa Lavanda | Private Villa with Pool in Tetovo" />
+    <meta property="og:description" content="Private villa with pool, mountain views, and terrace in Tetovo, North Macedonia. Sleeps 6. Book on Airbnb or contact the host directly." />
+    <meta property="og:image" content="https://villalavanda.casa/assets/images/villa-aerial-brand.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Villa Lavanda | Private Villa with Pool in Tetovo" />
+    <meta name="twitter:description" content="Private villa with pool, mountain views, and terrace in Tetovo, North Macedonia. Sleeps 6." />
+    <meta name="twitter:image" content="https://villalavanda.casa/assets/images/villa-aerial-brand.jpeg" />
+
+    <meta name="theme-color" content="#2f4034" />
     <link rel="icon" type="image/jpeg" href="assets/images/villa-lavanda-icon.jpeg" />
     <link rel="apple-touch-icon" href="assets/images/villa-lavanda-icon.jpeg" />
     <link rel="stylesheet" href="styles.css" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LodgingBusiness",
         "name": "Villa Lavanda",
-        "description": "Elegant private villa accommodation with curated amenities, direct booking links, and map location.",
+        "description": "Private villa with pool, mountain views, and terrace in Tetovo, North Macedonia. Sleeps up to 6 guests, 2 bedrooms, 2 bathrooms.",
+        "url": "https://villalavanda.casa/",
+        "telephone": "+38975406404",
+        "email": "booking@villalavanda.casa",
         "image": [
-          "assets/images/villa-aerial-brand.jpeg",
-          "assets/images/villa-pool-day.jpeg",
-          "assets/images/bedroom-double.jpeg"
+          "https://villalavanda.casa/assets/images/villa-aerial-brand.jpeg",
+          "https://villalavanda.casa/assets/images/villa-pool-day.jpeg",
+          "https://villalavanda.casa/assets/images/bedroom-double.jpeg"
         ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tetovo",
+          "addressCountry": "MK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 42.03907,
+          "longitude": 20.99329
+        },
+        "numberOfRooms": 2,
+        "petsAllowed": false,
+        "checkinTime": "12:00",
+        "checkoutTime": "10:00",
         "amenityFeature": [
           { "@type": "LocationFeatureSpecification", "name": "Private pool", "value": true },
           { "@type": "LocationFeatureSpecification", "name": "Outdoor dining", "value": true },
           { "@type": "LocationFeatureSpecification", "name": "Parking", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true }
+          { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Equipped kitchen", "value": true }
+        ],
+        "sameAs": [
+          "https://www.airbnb.com/rooms/1714050000210595231"
         ]
       }
     </script>
@@ -75,10 +116,9 @@
             srcset="assets/images/villa-exterior-day.jpeg"
           />
           <img
-            src="assets/images/pool-view-day.jpeg"
+            src="assets/images/villa-exterior-day.jpeg"
             alt="Villa Lavanda exterior and pool in daylight"
           />
-          
         </picture>
         <div class="hero-shade"></div>
 
@@ -364,7 +404,7 @@
             data-map
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Villa%20Lavanda&output=embed"
+            src=""
           ></iframe>
           <a class="button button-primary map-button" data-link="maps" href="#" target="_blank" rel="noopener">
             Open Google Maps
@@ -447,7 +487,6 @@
               <h3>Availability</h3>
               <p>Calendar dates are a guide. Confirm live dates before accepting payment.</p>
             </article>
-            
           </div>
         </div>
       </section>
