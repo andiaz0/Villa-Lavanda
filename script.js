@@ -1,22 +1,174 @@
 const villaConfig = {
-  guests: "8",
-  bedrooms: "4",
-  bathrooms: "3",
+  guests: "6",
+  bedrooms: "2",
+  bathrooms: "2",
   hostEmail: "booking@villalavanda.casa",
   phoneDisplay: "+389 75 406 404",
   phoneHref: "tel:+38975406404",
   whatsappHref: "https://wa.me/38975406404",
   airbnbUrl: "https://www.airbnb.com/rooms/1714050000210595231?adults=1&check_in=2026-08-18&check_out=2026-08-19&guests=1&search_mode=regular_search&source_impression_id=p3_1783098629_P3_hT_sLBMpmMK_L&previous_page_section_name=1000&federated_search_id=d4e44d70-0428-4d5d-aa24-520af53ec1f9",
   bookingUrl: "https://www.booking.com/",
-  mapsUrl: "https://www.google.com/maps/place/Villa+Lavanda/@42.056604,20.9739112,9577m/data=!3m1!1e3!4m6!3m5!1s0x1353f7a3c73d5a83:0x54c65ee071e6c4aa!8m2!3d42.0461725!4d21.0007744!16s%2Fg%2F11nqqr_2vh?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
-  mapEmbedQuery: "Villa Lavanda",
-  minimumStay: "3 nights",
-  calendarUpdated: "Airbnb calendar sync",
+  mapsUrl: "https://maps.app.goo.gl/fDk6FayZh5pP7uRaA",
+  // Paste the exact coordinates from your Google Maps pin here
+  mapLat: 42.046167,
+  mapLng: 21.000776,
+  mapZoom: 16,
+  minimumStay: "1 nights",
+  calendarUpdated: "Airbnb calendar",
   availabilityStartMonth: "2026-07",
   airbnbCalendarSync: true,
   airbnbCalendarIcsUrl: "https://www.airbnb.com/calendar/ical/1714050000210595231.ics?t=aae374db75f44c109b9c5461c1c00989",
   airbnbCalendarProxyUrl: "/api/airbnb-calendar?url=",
-  availabilityDates: {}
+  availabilityDates: {},
+  galleryCategories: [
+    {
+      id: "exterior",
+      title: "Exterior & Views",
+      items: [
+        {
+          type: "image",
+          src: "assets/images/villa-aerial-brand.jpeg",
+          alt: "Aerial view of Villa Lavanda with pool and garden"
+        },
+        {
+          type: "image",
+          src: "assets/images/villa-exterior-day.jpeg",
+          alt: "Villa Lavanda exterior in daylight"
+        },
+        {
+          type: "image",
+          src: "assets/images/villa-pool-day.jpeg",
+          alt: "Villa Lavanda beside the pool during the day"
+        },
+        {
+          type: "image",
+          src: "assets/images/villa-pool-night.jpeg",
+          alt: "Villa Lavanda lit up beside the pool at night"
+        }
+      ]
+    },
+    {
+      id: "pool",
+      title: "Pool",
+      items: [
+        {
+          type: "image",
+          src: "assets/images/pool-view-day.jpeg",
+          alt: "Pool with mountain and city views at Villa Lavanda"
+        },
+        {
+          type: "image",
+          src: "assets/images/pool-mountain-view.jpeg",
+          alt: "Pool overlooking the valley and mountains"
+        },
+        {
+          type: "image",
+          src: "assets/images/pool-night-detail.jpeg",
+          alt: "Pool detail at night with warm lighting"
+        }
+      ]
+    },
+    {
+      id: "terrace",
+      title: "Terrace & Outdoor Living",
+      items: [
+        {
+          type: "image",
+          src: "assets/images/villa-terrace-day.jpeg",
+          alt: "Terrace seating area at Villa Lavanda"
+        },
+        {
+          type: "image",
+          src: "assets/images/terrace-day-lounge.jpeg",
+          alt: "Outdoor lounge on the terrace"
+        },
+        {
+          type: "image",
+          src: "assets/images/terrace-hammock-night.jpeg",
+          alt: "Hammock on the terrace at night"
+        },
+        {
+          type: "image",
+          src: "assets/images/terrace-night-view.jpeg",
+          alt: "Terrace view over the valley at night"
+        }
+      ]
+    },
+    {
+      id: "bedrooms",
+      title: "Bedrooms",
+      items: [
+        {
+          type: "image",
+          src: "assets/images/bedroom-double.jpeg",
+          alt: "Double bedroom with timber ceiling at Villa Lavanda"
+        },
+        {
+          type: "image",
+          src: "assets/images/bedroom-twin.jpeg",
+          alt: "Twin bedroom at Villa Lavanda"
+        }
+      ]
+    },
+    {
+      id: "living",
+      title: "Living Room",
+      items: [
+        {
+          type: "image",
+          src: "assets/images/living-room.jpeg",
+          alt: "Living room at Villa Lavanda"
+        }
+      ]
+    },
+    {
+      id: "kitchen",
+      title: "Kitchen & Dining",
+      items: [
+        {
+          type: "image",
+          src: "assets/images/kitchen.jpeg",
+          
+          alt: "Kitchen at Villa Lavanda"
+        },
+          {
+          type: "image",
+          src: "assets/images/dinning.jpeg",
+          
+          alt: "Dining area at Villa Lavanda"
+        }
+      ]
+    },
+ 
+    {
+      id: "videos",
+      title: "Videos",
+      emptyText: "Video tour coming soon.",
+      items: [
+        
+        {
+          type: "video",
+          src: "assets/videos/video1.mp4",
+          poster: "assets/images/villa-aerial-brand.jpeg",
+          alt: "Video tour of Villa Lavanda"
+        },
+        {
+          type: "video",
+          src: "assets/videos/video2.mp4",
+          poster: "assets/images/villa-exterior-day.jpeg",
+          alt: "Video tour of Villa Lavanda"
+        },
+        {
+          type: "video",
+          src: "assets/videos/video3.mp4",
+          
+          poster: "assets/images/pool-view-day.jpeg",
+          alt: "Video tour of Villa Lavanda"
+        }
+        
+      ]
+    }
+  ]
 };
 
 const header = document.querySelector("[data-header]");
@@ -103,11 +255,11 @@ let availabilityDates = { ...villaConfig.availabilityDates };
 let calendarSyncState = villaConfig.airbnbCalendarSync && villaConfig.airbnbCalendarIcsUrl ? "syncing" : "manual";
 
 const statusLabels = {
-  available: "Available",
-  limited: "Limited",
+  available: "",
+  limited: "",
   booked: "Booked",
-  closed: "Closed",
-  check: "Check"
+  closed: "",
+  check: ""
 };
 
 const monthNames = [
@@ -354,6 +506,75 @@ calendarNext?.addEventListener("click", () => {
 renderCalendar();
 syncAirbnbCalendar();
 
+const createGalleryMedia = (item) => {
+  if (item.type === "video") {
+    const video = document.createElement("video");
+    video.src = item.src;
+    video.controls = true;
+    video.playsInline = true;
+    video.preload = "metadata";
+    video.setAttribute("aria-label", item.alt || "Villa Lavanda video");
+
+    if (item.poster) {
+      video.poster = item.poster;
+    }
+
+    return video;
+  }
+
+  const image = document.createElement("img");
+  image.src = item.src;
+  image.alt = item.alt || "";
+  image.loading = "lazy";
+  return image;
+};
+
+const renderGallery = () => {
+  const galleryRoot = document.querySelector("[data-gallery]");
+  if (!galleryRoot || !Array.isArray(villaConfig.galleryCategories)) {
+    return;
+  }
+
+  galleryRoot.innerHTML = "";
+
+  villaConfig.galleryCategories.forEach((category) => {
+    const section = document.createElement("section");
+    section.className = "gallery-category";
+    section.id = `gallery-${category.id}`;
+    section.setAttribute("aria-labelledby", `gallery-${category.id}-title`);
+
+    const heading = document.createElement("h3");
+    heading.id = `gallery-${category.id}-title`;
+    heading.className = "gallery-category-title";
+    heading.textContent = category.title;
+
+    const grid = document.createElement("div");
+    grid.className = "gallery-grid";
+
+    if (!category.items?.length) {
+      const empty = document.createElement("p");
+      empty.className = "gallery-empty";
+      empty.textContent = category.emptyText || "Photos will be added soon.";
+      section.append(heading, empty);
+      galleryRoot.append(section);
+      return;
+    }
+
+    category.items.forEach((item) => {
+      const media = createGalleryMedia(item);
+      const figure = document.createElement("figure");
+      figure.className = `gallery-item gallery-item-${item.type || "image"}`;
+      figure.append(media);
+      grid.append(figure);
+    });
+
+    section.append(heading, grid);
+    galleryRoot.append(section);
+  });
+};
+
+renderGallery();
+
 const inquiryForm = document.querySelector("[data-inquiry-form]");
 
 inquiryForm.addEventListener("submit", (event) => {
@@ -363,24 +584,83 @@ inquiryForm.addEventListener("submit", (event) => {
   const arrival = formData.get("arrival");
   const departure = formData.get("departure");
   const guests = formData.get("guests");
-  const message = formData.get("message") || "No extra message added.";
+  const message = formData.get("message") || "";
 
-  const body = [
-    "Hello Villa Lavanda,",
-    "",
-    "I would like to ask about availability.",
+  const lines = [
+    "Hello Villa Lavanda 👋",
     "",
     `Arrival: ${arrival}`,
     `Departure: ${departure}`,
     `Guests: ${guests}`,
-    "",
-    "Message:",
-    message,
-    "",
-    "Thank you."
-  ].join("\n");
+  ];
 
-  window.location.href = `mailto:${villaConfig.hostEmail}?subject=${encodeURIComponent(
-    "Villa Lavanda availability inquiry"
-  )}&body=${encodeURIComponent(body)}`;
+  if (message) {
+    lines.push("", message);
+  }
+
+  const whatsappNumber = villaConfig.whatsappHref.replace("https://wa.me/", "");
+  window.open(
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`,
+    "_blank",
+    "noopener"
+  );
 });
+
+// ── Live review display ──────────────────────────────────────────────────────
+
+const reviewForm = document.querySelector("[data-review-form]");
+const submittedReviews = document.querySelector("[data-submitted-reviews]");
+
+const starsHtml = (count) => {
+  const n = Math.max(1, Math.min(5, Number(count)));
+  return "★".repeat(n) + "☆".repeat(5 - n);
+};
+
+const createReviewCard = ({ name, rating, review }) => {
+  const card = document.createElement("article");
+  card.className = "submitted-review-card";
+
+  const header = document.createElement("div");
+  header.className = "submitted-review-header";
+
+  const nameEl = document.createElement("span");
+  nameEl.className = "submitted-review-name";
+  nameEl.textContent = name;
+
+  const starsEl = document.createElement("span");
+  starsEl.className = "submitted-review-stars";
+  starsEl.setAttribute("aria-label", `${rating} out of 5 stars`);
+  starsEl.textContent = starsHtml(rating);
+
+  header.append(nameEl, starsEl);
+
+  const text = document.createElement("p");
+  text.className = "submitted-review-text";
+  text.textContent = review;
+
+  card.append(header, text);
+  return card;
+};
+
+if (reviewForm && submittedReviews) {
+  reviewForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(reviewForm);
+    const name = String(formData.get("name") || "").trim();
+    const rating = formData.get("rating");
+    const review = String(formData.get("review") || "").trim();
+
+    if (!name || !review) {
+      return;
+    }
+
+    const card = createReviewCard({ name, rating, review });
+    submittedReviews.prepend(card);
+
+    reviewForm.reset();
+
+    // Scroll card into view smoothly
+    card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  });
+}

@@ -62,15 +62,41 @@ Use these manual fallback statuses:
 
 Any future date not listed in `availabilityDates` is shown as available. Past dates are automatically shown as closed.
 
-## Replace photos
+## Gallery photos and videos
 
-The current design uses elegant remote placeholder images. For a real launch, replace the image URLs in `index.html` with actual Villa Lavanda photos. Keep the same image sizes and sections:
+Real Villa Lavanda photos are stored in `assets/images`.
 
-- Hero exterior or terrace photo.
-- Interior living photo.
-- Pool or garden photo.
-- Bedroom photo.
-- Six gallery photos showing exterior, living, dining, bathroom, kitchen, and pool.
+The categorized gallery is controlled from `script.js` in `galleryCategories`. Current categories include:
+
+- Exterior & Views
+- Pool
+- Terrace & Outdoor Living
+- Bedrooms
+- Living Room
+- Kitchen & Dining
+- Bathrooms
+- Videos
+
+To add more images, copy the file into `assets/images`, then add an item:
+
+```js
+{
+  type: "image",
+  src: "assets/images/example-photo.jpeg",
+  alt: "Short description of the photo"
+}
+```
+
+To add videos, copy the video into `assets/videos`, then add it under the `Videos` category:
+
+```js
+{
+  type: "video",
+  src: "assets/videos/villa-tour.mp4",
+  poster: "assets/images/villa-aerial-brand.jpeg",
+  alt: "Video tour of Villa Lavanda"
+}
+```
 
 ## Booking platform consistency
 
@@ -85,4 +111,3 @@ Before launch, make these details match Airbnb and Booking.com exactly:
 - Real guest reviews.
 - Calendar dates and minimum stay.
 - Cleaning fee, tourist tax, deposit, and seasonal charges.
-
