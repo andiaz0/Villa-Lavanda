@@ -566,7 +566,7 @@ h3 {
 
 .calendar-day.is-booked {
   background: var(--booked-soft);
-  border-color: rgba(111, 95, 145, 0.38);
+  border-color: rgba(145, 95, 95, 0.38);
 }
 
 .calendar-day.is-booked span {
