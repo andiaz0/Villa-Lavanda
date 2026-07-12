@@ -12,8 +12,8 @@
   --available-soft: #edf8ef;
   --closed: #b64646;
   --closed-soft: #fff0f0;
-  --booked: #6f5f91;
-  --booked-soft: #f3effa;
+  --booked: #b64646;
+  --booked-soft: #fff0f0;
   --line: rgba(23, 33, 27, 0.13);
   --shadow: 0 22px 70px rgba(23, 33, 27, 0.12);
   --radius: 8px;
@@ -52,6 +52,7 @@ a {
 
 button,
 input,
+select,
 textarea {
   font: inherit;
 }
@@ -142,6 +143,40 @@ code {
 
 .site-nav a:hover {
   opacity: 1;
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.2rem;
+}
+
+.language-switcher button {
+  min-width: 36px;
+  min-height: 32px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.76rem;
+  font-weight: 850;
+}
+
+.language-switcher button.is-active {
+  background: currentColor;
+}
+
+.site-header:not(.is-scrolled):not(.is-open) .language-switcher button.is-active {
+  color: var(--forest);
+}
+
+.site-header.is-scrolled .language-switcher button.is-active,
+.site-header.is-open .language-switcher button.is-active {
+  color: #fff;
 }
 
 .nav-cta {
@@ -350,8 +385,10 @@ h3 {
 
 .booking-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+  max-width: 980px;
+  margin-inline: auto;
 }
 
 .booking-card {
@@ -718,10 +755,11 @@ h3 {
 
 .intro-photo-strip img {
   width: 100%;
-  height: 200px;
+  height: 120px;
   object-fit: cover;
   border-radius: var(--radius);
   transition: transform 400ms ease;
+  cursor: zoom-in;
 }
 
 .intro-photo-strip img:hover {
@@ -757,6 +795,7 @@ h3 {
   height: 100%;
   object-fit: cover;
   transition: transform 420ms ease;
+  cursor: zoom-in;
 }
 
 .feature-large:hover img,
@@ -846,6 +885,7 @@ h3 {
   height: 220px;
   object-fit: cover;
   border-radius: var(--radius);
+  cursor: zoom-in;
 }
 
 .gallery-item-video video {
@@ -1318,6 +1358,47 @@ blockquote {
   resize: vertical;
 }
 
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  background: rgba(10, 14, 12, 0.88);
+  padding: clamp(1rem, 4vw, 3rem);
+}
+
+.image-lightbox[hidden] {
+  display: none;
+}
+
+.image-lightbox img {
+  max-width: min(1120px, 96vw);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
 .site-footer {
   display: flex;
   align-items: center;
@@ -1383,10 +1464,17 @@ blockquote {
   }
 
   .nav-toggle {
+    order: 3;
     display: block;
   }
 
+  .language-switcher {
+    order: 2;
+    margin-left: auto;
+  }
+
   .site-nav {
+    order: 4;
     position: absolute;
     inset: 68px 1rem auto 1rem;
     display: none;
@@ -1478,7 +1566,7 @@ blockquote {
   }
 
   .intro-photo-strip img {
-    height: 160px;
+    height: 110px;
   }
 
   .feature-large,
@@ -1557,7 +1645,7 @@ blockquote {
   }
 
   .intro-photo-strip img {
-    height: 130px;
+    height: 92px;
   }
 
   .review-form {
