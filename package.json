@@ -1,0 +1,23 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "This is a static website. Open `index.html` in a browser or upload the whole `VillaLavanda` folder to hosting.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andiaz0/Villa-Lavanda.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andiaz0/Villa-Lavanda/issues"
+  },
+  "homepage": "https://github.com/andiaz0/Villa-Lavanda#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}

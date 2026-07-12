@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Package manager files
+.npm
+.pnpm-debug.log*
+.yarn-integrity
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.turbo/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.production.local
+.env.development.local
+.env.test.local
+
+# IDE and OS files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Cache and temp files
+.cache/
+.vercel/
+.parcel-cache/
+*.log
