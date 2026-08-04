@@ -2,7 +2,7 @@ const villaConfig = {
   guests: "6",
   bedrooms: "2",
   bathrooms: "2",
-  hostEmail: "booking@villalavanda.casa",
+  hostEmail: "andiazizi0198@gmail.com",
   phoneDisplay: "+389 75 406 404",
   phoneHref: "tel:+38975406404",
   whatsappHref: "https://wa.me/38975406404",
