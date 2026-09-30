@@ -11,7 +11,7 @@ const villaConfig = {
   mapLat: 42.046167,
   mapLng: 21.000776,
   mapZoom: 16,
-  availabilityStartMonth: "2026-07",
+  availabilityStartMonth: "2026-10",
   airbnbCalendarSync: true,
   airbnbCalendarIcsUrl: "https://www.airbnb.com/calendar/ical/1714050000210595231.ics?t=aae374db75f44c109b9c5461c1c00989",
   airbnbCalendarProxyUrl: "/api/airbnb-calendar?url=",
