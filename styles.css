@@ -223,6 +223,7 @@ code {
 .hero-media img {
   height: 100%;
   object-fit: cover;
+  object-position: center 75%;
 }
 
 .hero-shade {
@@ -1356,6 +1357,12 @@ blockquote {
 
 .inquiry-form textarea {
   resize: vertical;
+}
+
+.inquiry-form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
 }
 
 .image-lightbox {

@@ -33,6 +33,11 @@ const villaConfig = {
         },
         {
           type: "image",
+          src: "assets/images/villa-aerial-evening.jpeg",
+          alt: "Evening aerial view of Villa Lavanda, the pool, and gardens"
+        },
+        {
+          type: "image",
           src: "assets/images/villa-pool-day.jpeg",
           alt: "Villa Lavanda beside the pool during the day"
         },
@@ -61,6 +66,26 @@ const villaConfig = {
           type: "image",
           src: "assets/images/pool-night-detail.jpeg",
           alt: "Pool detail at night with warm lighting"
+        },
+        {
+          type: "image",
+          src: "assets/images/hot-tub-day-valley.jpeg",
+          alt: "Outdoor hot tub overlooking the valley in daylight"
+        },
+        {
+          type: "image",
+          src: "assets/images/hot-tub-exterior-day.jpeg",
+          alt: "Hot tub beside the villa in daylight"
+        },
+        {
+          type: "image",
+          src: "assets/images/hot-tub-evening-purple.jpeg",
+          alt: "Hot tub glowing purple at night with valley views"
+        },
+        {
+          type: "image",
+          src: "assets/images/hot-tub-evening-green.jpeg",
+          alt: "Hot tub glowing green at night"
         }
       ]
     },
@@ -114,6 +139,11 @@ const villaConfig = {
           type: "image",
           src: "assets/images/living-room.jpeg",
           alt: "Living room at Villa Lavanda"
+        },
+        {
+          type: "image",
+          src: "assets/images/fireplace-lounge.jpeg",
+          alt: "Warm fireplace and lounge chair at Villa Lavanda"
         }
       ]
     },
@@ -200,16 +230,16 @@ const translations = {
     "booking.airbnb.copy": "Përdor këtë buton nëse preferon vlerësimet, mesazhet dhe pagesën e sigurt në Airbnb.",
     "booking.airbnb.button": "Hap Airbnb",
     "booking.direct.label": "Kërkesë direkte",
-    "booking.direct.title": "Pyet para rezervimit",
-    "booking.direct.copy": "Ideale për qëndrime më të gjata, kërkesa speciale dhe pyetje rreth vilës.",
+    "booking.direct.title": "Kërko qëndrim direkt",
+    "booking.direct.copy": "Dërgo datat dhe detajet e mysafirëve. Qëndrimi konfirmohet vetëm pasi hosti të miratojë disponueshmërinë dhe çmimin.",
     "booking.direct.button": "Dërgo kërkesë",
     "availability.eyebrow": "Disponueshmëria",
-    "availability.title": "Shiko datat e lira para se të zgjedhësh ku të rezervosh.",
-    "availability.copy": "Ky kalendar u jep mysafirëve një pamje të qartë të datave të lira dhe të rezervuara. Çmimi dhe konfirmimi final bëhen përmes Airbnb ose direkt me hostin.",
+    "availability.title": "Kontrollo datat dhe kërko qëndrimin.",
+    "availability.copy": "Kalendari është udhëzues. Dërgo kërkesë për datat e tua dhe hosti do të konfirmojë disponueshmërinë dhe çmimin final para konfirmimit të qëndrimit.",
     "availability.minimum": "Qëndrimi minimal",
     "availability.minimum.value": "1 natë",
     "availability.updated": "Kalendari",
-    "availability.verify": "Kontrollo në Airbnb",
+    "availability.verify": "Kërko këto data",
     "calendar.title": "Disponueshmëria",
     "calendar.syncing": "Duke kontrolluar kalendarin e Airbnb...",
     "calendar.synced": "Kalendari i Airbnb u sinkronizua.",
@@ -234,7 +264,7 @@ const translations = {
     "gallery.eyebrow": "Galeria",
     "gallery.title": "Çdo gjë që mysafirët duhet ta shohin para qëndrimit.",
     "gallery.exterior": "Pamje të jashtme",
-    "gallery.pool": "Pishina",
+    "gallery.pool": "Pishina dhe xhakuzi",
     "gallery.terrace": "Terrasa dhe qëndrimi jashtë",
     "gallery.bedrooms": "Dhomat e gjumit",
     "gallery.living": "Salloni",
@@ -298,19 +328,22 @@ const translations = {
     "policy.cancel.title": "Anulimi",
     "policy.cancel.copy": "Mysafirët mund të anulojnë deri në 14 ditë para ardhjes.",
     "policy.availability.title": "Disponueshmëria",
-    "policy.availability.copy": "Datat në kalendar janë udhëzuese. Konfirmo datat live para pranimit të pagesës.",
+    "policy.availability.copy": "Datat në kalendar janë udhëzuese. Konfirmo disponueshmërinë dhe çmimin me hostin para konfirmimit.",
     "contact.eyebrow": "Kontakt",
-    "contact.title": "Pyetjet direkte, pa komplikime.",
-    "contact.copy": "Mysafirët mund të dërgojnë datat dhe numrin e personave me email, WhatsApp ose telefon. Për disponueshmëri dhe çmim final, përdor Airbnb ose konfirmim direkt me hostin.",
+    "contact.title": "Kërko të rezervosh Villa Lavanda.",
+    "contact.copy": "Dërgo datat e dëshiruara dhe detajet e grupit në WhatsApp. Hosti do të kontrollojë disponueshmërinë dhe do të konfirmojë çmimin total. Pagesa online nuk pranohet; pagesa bëhet në vilë.",
     "contact.call": "Telefono hostin",
     "contact.whatsapp": "WhatsApp",
     "contact.email": "Email",
+    "form.name": "Emri yt",
     "form.arrival": "Ardhja",
     "form.departure": "Largimi",
     "form.guests": "Mysafirë",
     "form.message": "Mesazhi",
     "form.message.placeholder": "Trego çfarë të duhet për qëndrimin.",
-    "form.submit": "Dërgo në WhatsApp",
+    "form.submit": "Dërgo kërkesën në WhatsApp",
+    "form.note": "Kjo është kërkesë për rezervim, jo konfirmim. WhatsApp do të hapet me mesazhin gati për dërgim.",
+    "form.date.order": "Data e largimit duhet të jetë pas datës së ardhjes.",
     "footer.copy": "Akomodim elegant në vilë private.",
     "lightbox.close": "Mbyll fotografinë"
   },
@@ -336,16 +369,16 @@ const translations = {
     "booking.airbnb.copy": "Користи го ова копче ако сакаш Airbnb рецензии, пораки и сигурна наплата.",
     "booking.airbnb.button": "Отвори Airbnb",
     "booking.direct.label": "Директно барање",
-    "booking.direct.title": "Прашај пред резервација",
-    "booking.direct.copy": "Идеално за подолг престој, посебни барања и прашања за вилата.",
+    "booking.direct.title": "Побарај директна резервација",
+    "booking.direct.copy": "Испрати ги датумите и деталите за гостите. Престојот е потврден само откако домаќинот ќе ја одобри достапноста и цената.",
     "booking.direct.button": "Испрати барање",
     "availability.eyebrow": "Достапност",
-    "availability.title": "Погледни слободни датуми пред да избереш каде да резервираш.",
-    "availability.copy": "Овој календар им дава јасен преглед на гостите за слободни и резервирани датуми. Финалната цена и потврда се преку Airbnb или директно со домаќинот.",
+    "availability.title": "Провери датуми и побарај престој.",
+    "availability.copy": "Календарот е информативен. Испрати барање за твоите датуми, а домаќинот ќе ја потврди достапноста и конечната цена пред престојот да биде потврден.",
     "availability.minimum": "Минимален престој",
     "availability.minimum.value": "1 ноќ",
     "availability.updated": "Календар",
-    "availability.verify": "Провери на Airbnb",
+    "availability.verify": "Побарај ги овие датуми",
     "calendar.title": "Достапност",
     "calendar.syncing": "Се проверува Airbnb календарот...",
     "calendar.synced": "Airbnb календарот е синхронизиран.",
@@ -370,7 +403,7 @@ const translations = {
     "gallery.eyebrow": "Галерија",
     "gallery.title": "Сè што гостите треба да го видат пред престојот.",
     "gallery.exterior": "Надворешност и погледи",
-    "gallery.pool": "Базен",
+    "gallery.pool": "Базен и џакузи",
     "gallery.terrace": "Тераса и надворешен престој",
     "gallery.bedrooms": "Спални",
     "gallery.living": "Дневна соба",
@@ -434,19 +467,22 @@ const translations = {
     "policy.cancel.title": "Откажување",
     "policy.cancel.copy": "Гостите можат да откажат до 14 дена пред пристигнување.",
     "policy.availability.title": "Достапност",
-    "policy.availability.copy": "Датумите во календарот се водич. Потврдете ги живите датуми пред наплата.",
+    "policy.availability.copy": "Датумите во календарот се информативни. Потврди ги достапноста и цената со домаќинот пред потврда.",
     "contact.eyebrow": "Контакт",
-    "contact.title": "Директни прашања без компликации.",
-    "contact.copy": "Гостите можат да испратат датуми и број на лица преку email, WhatsApp или телефон. За финална достапност и цена, користете Airbnb или директна потврда од домаќинот.",
+    "contact.title": "Побарај резервација во Villa Lavanda.",
+    "contact.copy": "Испрати ги посакуваните датуми и деталите за групата преку WhatsApp. Домаќинот ќе ја провери достапноста и ќе ја потврди вкупната цена. Нема онлајн наплата; плаќањето се договара во вилата.",
     "contact.call": "Јави се на домаќинот",
     "contact.whatsapp": "WhatsApp",
     "contact.email": "Email",
+    "form.name": "Твоето име",
     "form.arrival": "Пристигнување",
     "form.departure": "Заминување",
     "form.guests": "Гости",
     "form.message": "Порака",
     "form.message.placeholder": "Кажете што ви треба за престојот.",
-    "form.submit": "Испрати на WhatsApp",
+    "form.submit": "Испрати барање на WhatsApp",
+    "form.note": "Ова е барање за резервација, не потврда. WhatsApp ќе се отвори со подготвена порака.",
+    "form.date.order": "Датумот на заминување мора да биде по датумот на пристигнување.",
     "footer.copy": "Елегантно сместување во приватна вила.",
     "lightbox.close": "Затвори фотографија"
   },
@@ -472,16 +508,16 @@ const translations = {
     "booking.airbnb.copy": "Use this button for guests who prefer Airbnb reviews, messaging, and secure checkout.",
     "booking.airbnb.button": "Open Airbnb",
     "booking.direct.label": "Direct inquiry",
-    "booking.direct.title": "Ask before booking",
-    "booking.direct.copy": "Perfect for longer stays, special requests, and questions about the villa.",
+    "booking.direct.title": "Request a stay directly",
+    "booking.direct.copy": "Send your dates and guest details. Your stay is confirmed only after the host approves availability and price.",
     "booking.direct.button": "Send inquiry",
     "availability.eyebrow": "Availability",
-    "availability.title": "See open dates before choosing where to book.",
-    "availability.copy": "This calendar gives guests a clear first look at available and booked dates. Final pricing and confirmation should still happen through Airbnb or direct host approval.",
+    "availability.title": "Check dates, then request your stay.",
+    "availability.copy": "The calendar is a guide. Send a booking request for your dates, and the host will confirm availability and the final price before your stay is confirmed.",
     "availability.minimum": "Minimum stay",
     "availability.minimum.value": "1 night",
     "availability.updated": "Calendar",
-    "availability.verify": "Verify on Airbnb",
+    "availability.verify": "Request these dates",
     "calendar.title": "Availability",
     "calendar.syncing": "Checking Airbnb calendar...",
     "calendar.synced": "Live Airbnb calendar synced.",
@@ -506,7 +542,7 @@ const translations = {
     "gallery.eyebrow": "Gallery",
     "gallery.title": "Everything guests need to imagine the stay.",
     "gallery.exterior": "Exterior & Views",
-    "gallery.pool": "Pool",
+    "gallery.pool": "Pool & Hot Tub",
     "gallery.terrace": "Terrace & Outdoor Living",
     "gallery.bedrooms": "Bedrooms",
     "gallery.living": "Living Room",
@@ -570,19 +606,22 @@ const translations = {
     "policy.cancel.title": "Cancellation",
     "policy.cancel.copy": "Guests can cancel up to 14 days before arrival.",
     "policy.availability.title": "Availability",
-    "policy.availability.copy": "Calendar dates are a guide. Confirm live dates before accepting payment.",
+    "policy.availability.copy": "Calendar dates are a guide. Confirm availability and price with the host before the stay is confirmed.",
     "contact.eyebrow": "Contact",
-    "contact.title": "Make direct questions effortless.",
-    "contact.copy": "Guests can send dates and group size by email, WhatsApp, or phone. For final availability and pricing, use Airbnb or direct host confirmation.",
+    "contact.title": "Request a stay at Villa Lavanda.",
+    "contact.copy": "Send your preferred dates and group details on WhatsApp. The host will check availability and confirm the total price. No online payment is taken; payment is arranged at the villa.",
     "contact.call": "Call host",
     "contact.whatsapp": "WhatsApp",
     "contact.email": "Email",
+    "form.name": "Your name",
     "form.arrival": "Arrival",
     "form.departure": "Departure",
     "form.guests": "Guests",
     "form.message": "Message",
     "form.message.placeholder": "Tell us what you need for your stay.",
-    "form.submit": "Send on WhatsApp",
+    "form.submit": "Send booking request on WhatsApp",
+    "form.note": "This is a booking request, not a confirmed reservation. WhatsApp will open with your message ready to send.",
+    "form.date.order": "Departure must be after arrival.",
     "footer.copy": "Elegant private villa accommodation.",
     "lightbox.close": "Close image"
   }
@@ -755,11 +794,13 @@ const staticTextBindings = [
   [".contact-lines a:nth-child(1)", "contact.call"],
   [".contact-lines a:nth-child(2)", "contact.whatsapp"],
   [".contact-lines a:nth-child(3)", "contact.email"],
-  [".inquiry-form label:nth-child(1)", "form.arrival", "label"],
-  [".inquiry-form label:nth-child(2)", "form.departure", "label"],
-  [".inquiry-form label:nth-child(3)", "form.guests", "label"],
-  [".inquiry-form label:nth-child(4)", "form.message", "label"],
+  [".inquiry-form label:nth-child(1)", "form.name", "label"],
+  [".inquiry-form label:nth-child(2)", "form.arrival", "label"],
+  [".inquiry-form label:nth-child(3)", "form.departure", "label"],
+  [".inquiry-form label:nth-child(4)", "form.guests", "label"],
+  [".inquiry-form label:nth-child(5)", "form.message", "label"],
   [".inquiry-form button", "form.submit"],
+  [".inquiry-form-note", "form.note"],
   [".site-footer p", "footer.copy"]
 ];
 
@@ -1174,22 +1215,53 @@ document.querySelectorAll("[data-language]").forEach((button) => {
 });
 
 const inquiryForm = document.querySelector("[data-inquiry-form]");
+const arrivalInput = inquiryForm?.querySelector("[name='arrival']");
+const departureInput = inquiryForm?.querySelector("[name='departure']");
+
+if (arrivalInput && departureInput) {
+  const updateDepartureConstraint = () => {
+    departureInput.min = arrivalInput.value || todayValue;
+    if (departureInput.value && departureInput.value < departureInput.min) {
+      departureInput.value = "";
+    }
+    departureInput.setCustomValidity(
+      departureInput.value && departureInput.value <= arrivalInput.value ? t("form.date.order") : ""
+    );
+  };
+
+  arrivalInput.addEventListener("change", updateDepartureConstraint);
+  departureInput.addEventListener("change", updateDepartureConstraint);
+}
 
 inquiryForm?.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const formData = new FormData(inquiryForm);
+  const name = String(formData.get("name") || "").trim();
   const arrival = formData.get("arrival");
   const departure = formData.get("departure");
   const guests = formData.get("guests");
   const message = formData.get("message") || "";
 
+  if (arrivalInput && departureInput) {
+    departureInput.setCustomValidity(
+      departure && departure <= arrival ? t("form.date.order") : ""
+    );
+  }
+  if (!inquiryForm.reportValidity()) {
+    return;
+  }
+
   const lines = [
     "Hello Villa Lavanda",
+    "Booking request (not confirmed until approved)",
     "",
+    `${t("form.name")}: ${name}`,
     `${t("form.arrival")}: ${arrival}`,
     `${t("form.departure")}: ${departure}`,
-    `${t("form.guests")}: ${guests}`
+    `${t("form.guests")}: ${guests}`,
+    "",
+    "Please confirm availability and the final price."
   ];
 
   if (message) {

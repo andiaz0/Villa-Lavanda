@@ -46,7 +46,7 @@
     <meta name="twitter:image:alt" content="Villa Lavanda private mountain villa with pool in Tetovo" />
 
     <meta name="theme-color" content="#2f4034" />
-    <link rel="preload" as="image" href="assets/images/villa-exterior-day.jpeg" fetchpriority="high" />
+    <link rel="preload" as="image" href="assets/images/villa-hero-evening-aerial.jpeg" fetchpriority="high" />
     <link rel="icon" type="image/jpeg" href="assets/images/villa-lavanda-icon.jpeg" />
     <link rel="apple-touch-icon" href="assets/images/villa-lavanda-icon.jpeg" />
     <link rel="stylesheet" href="styles.css" />
@@ -137,13 +137,13 @@
         <picture class="hero-media">
           <source
             media="(max-width: 720px)"
-            srcset="assets/images/villa-exterior-day.jpeg"
+            srcset="assets/images/villa-hero-evening-aerial.jpeg"
           />
           <img
-            src="assets/images/villa-exterior-day.jpeg"
-            alt="Villa Lavanda exterior and pool in daylight"
-            width="1152"
-            height="2048"
+            src="assets/images/villa-hero-evening-aerial.jpeg"
+            alt="Aerial view of Villa Lavanda surrounded by trees at dusk"
+            width="768"
+            height="1347"
             fetchpriority="high"
             decoding="async"
           />
@@ -194,10 +194,10 @@
           <article class="booking-card direct-card">
             <div>
               <span class="booking-label">Direct inquiry</span>
-              <h2>Ask before booking</h2>
-              <p>Perfect for longer stays, special requests, and questions about the villa.</p>
+              <h2>Request a stay directly</h2>
+              <p>Send your dates and guest details. Your stay is confirmed only after the host approves availability and price.</p>
             </div>
-            <a class="button button-dark" data-link="email" href="#">Send inquiry</a>
+            <a class="button button-dark" href="#contact">Request dates</a>
           </article>
         </div>
       </section>
@@ -205,10 +205,10 @@
       <section class="section availability" id="availability" aria-labelledby="availability-title">
         <div class="availability-copy">
           <p class="eyebrow">Availability</p>
-          <h2 id="availability-title">See open dates before choosing where to book.</h2>
+          <h2 id="availability-title">Check dates, then request your stay.</h2>
           <p>
-            This calendar gives guests a clear first look at available and booked dates. Final
-            pricing and confirmation should still happen through Airbnb or direct host approval.
+            The calendar is a guide. Send a booking request for your dates, and the host will confirm
+            availability and the final price before your stay is confirmed.
           </p>
           <div class="availability-meta">
             <div>
@@ -221,8 +221,8 @@
             </div>
           </div>
           <div class="availability-actions">
-            <a class="button button-primary" data-link="airbnb" href="#" target="_blank" rel="noopener">
-              Verify on Airbnb
+            <a class="button button-primary" href="#contact">
+              Request these dates
             </a>
           </div>
         </div>
@@ -521,11 +521,11 @@
 
       <section class="section inquiry" id="contact">
         <div class="inquiry-copy">
-          <p class="eyebrow">Contact</p>
-          <h2>Make direct questions effortless.</h2>
+          <p class="eyebrow">Booking request</p>
+          <h2>Ask to book Villa Lavanda.</h2>
           <p>
-            Guests can send dates and group size by email, WhatsApp, or phone. For final availability and
-            pricing, use Airbnb or direct host confirmation.
+            Send your preferred dates and group details on WhatsApp. The host will check availability
+            and confirm the total price with you. No online payment is taken; payment is arranged at the villa.
           </p>
           <div class="contact-lines">
             <a data-link="phone" data-phone-display href="#">Call host</a>
@@ -534,6 +534,10 @@
           </div>
         </div>
         <form class="inquiry-form" data-inquiry-form>
+          <label>
+            Your name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
           <label>
             Arrival
             <input type="date" name="arrival" required />
@@ -551,6 +555,7 @@
             <textarea name="message" rows="4" placeholder="Tell us what you need for your stay."></textarea>
           </label>
           <button class="button button-primary" type="submit">Send on WhatsApp</button>
+          <p class="inquiry-form-note">This is a booking request, not a confirmed reservation. WhatsApp will open with your message ready to send.</p>
         </form>
       </section>
     </main>

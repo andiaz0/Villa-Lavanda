@@ -12,6 +12,13 @@ Open `script.js` and replace these values:
 - `mapEmbedQuery`: use the exact villa name, address, or coordinates.
 - `hostEmail`, `phoneHref`, `phoneDisplay`, `whatsappHref`: replace with real contact details.
 
+## Direct booking requests
+
+The website does not take online payments or instantly confirm direct reservations. Guests can submit
+their name, dates, and group size; the site opens WhatsApp with a prepared booking request for the host.
+The guest must send that message, and the host must confirm availability and the final price before the
+stay is confirmed. Payment is arranged at the villa. Keep the WhatsApp number in `script.js` current.
+
 ## Sync available and closed dates from Airbnb
 
 The availability calendar can sync from the Airbnb calendar export link.
